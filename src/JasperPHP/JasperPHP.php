@@ -99,7 +99,9 @@ class JasperPHP
 
     if (count($db_connection) > 0) {
       $command .= " -t " . $db_connection['driver'];
-      $command .= " -u " . $db_connection['username'];
+
+      if (!empty($db_connection['username']))
+        $command .= " -u " . $db_connection['username'];
 
       if (!empty($db_connection['password']))
         $command .= " -p " . $db_connection['password'];
