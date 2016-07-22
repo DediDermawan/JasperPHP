@@ -101,28 +101,28 @@ class JasperPHP
       $command .= " -t " . $db_connection['driver'];
       $command .= " -u " . $db_connection['username'];
 
-      if (isset($db_connection['password']) && !empty($db_connection['password']))
+      if (!empty($db_connection['password']))
         $command .= " -p " . $db_connection['password'];
 
-      if (isset($db_connection['host']) && !empty($db_connection['host']))
+      if (!empty($db_connection['host']))
         $command .= " -H " . $db_connection['host'];
 
-      if (isset($db_connection['database']) && !empty($db_connection['database']))
+      if (!empty($db_connection['database']))
         $command .= " -n " . $db_connection['database'];
 
-      if (isset($db_connection['port']) && !empty($db_connection['port']))
+      if (!empty($db_connection['port']))
         $command .= " --db-port " . $db_connection['port'];
 
-      if (isset($db_connection['jdbc_driver']) && !empty($db_connection['jdbc_driver']))
+      if (!empty($db_connection['jdbc_driver']))
         $command .= " --db-driver " . $db_connection['jdbc_driver'];
 
-      if (isset($db_connection['jdbc_url']) && !empty($db_connection['jdbc_url']))
+      if (!empty($db_connection['jdbc_url']))
         $command .= " --db-url " . $db_connection['jdbc_url'];
 
-      if (isset($db_connection['jdbc_dir']) && !empty($db_connection['jdbc_dir']))
+      if (!empty($db_connection['jdbc_dir']))
         $command .= ' --jdbc-dir ' . $db_connection['jdbc_dir'];
 
-      if (isset($db_connection['db_sid']) && !empty($db_connection['db_sid']))
+      if (!empty($db_connection['db_sid']))
         $command .= ' --db-sid ' . $db_connection['db_sid'];
     }
 
