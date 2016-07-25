@@ -100,10 +100,15 @@ class JasperPHP
         if (count($db_connection) > 0) {
             $command .= " -t " . $db_connection['driver'];
 
-            if (!empty($db_connection['data-file'])) {
-                $command .= " --data-file " . $db_connection['data-file'];
+            if ($db_connection['driver'] === 'json') {
+                if (!empty($db_connection['data-file'])) {
+                    $command .= " --json-query " . $db_connection['data-file'];
+                }
+            } else {
+                if (!empty($db_connection['data-file'])) {
+                    $command .= " --data-file " . $db_connection['data-file'];
+                }
             }
-
             if (!empty($db_connection['username'])) {
                 $command .= " -u " . $db_connection['username'];
             }
