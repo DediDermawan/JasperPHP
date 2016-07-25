@@ -102,7 +102,11 @@ class JasperPHP
 
             if ($db_connection['driver'] === 'json') {
                 if (!empty($db_connection['data-file'])) {
-                    $command .= " --json-query " . $db_connection['data-file'];
+                    $command .= " --data-file" . $db_connection['data-file'];
+                }
+                
+                if (!empty($db_connection['json-query'])) {
+                    $command .= " --json-query " . $db_connection['json-query'];
                 }
             } else {
                 if (!empty($db_connection['data-file'])) {
