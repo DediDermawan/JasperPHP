@@ -1,5 +1,5 @@
 {
-    "name": "cossou/jasperphp",
+    "name": "linovsoftware/jasperphp",
     "description": "Create Reports in PHP with JasperReports",
     "license": "MIT",
     "keywords": [
@@ -10,12 +10,15 @@
         "pdf",
         "java"
       ],
-    "homepage": "https://github.com/cossou/JasperPHP",
     "authors": [
         {
             "name": "Hélder Duarte",
             "email": "cossou@gmail.com"
-        }
+        },
+		{
+			"name": "M Chaeril Maricar",
+			"email": "chaeril@live.com"
+		}
     ],
     "autoload": {
         "psr-0": {
