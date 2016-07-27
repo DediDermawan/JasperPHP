@@ -102,9 +102,9 @@ class JasperPHP
 
             if ($db_connection['driver'] === 'json') {
                 if (!empty($db_connection['data-file'])) {
-                    $command .= " --data-file" . $db_connection['data-file'];
+                    $command .= " --data-file " . $db_connection['data-file'];
                 }
-                
+
                 if (!empty($db_connection['json-query'])) {
                     $command .= " --json-query " . $db_connection['json-query'];
                 }
@@ -113,6 +113,7 @@ class JasperPHP
                     $command .= " --data-file " . $db_connection['data-file'];
                 }
             }
+
             if (!empty($db_connection['username'])) {
                 $command .= " -u " . $db_connection['username'];
             }
