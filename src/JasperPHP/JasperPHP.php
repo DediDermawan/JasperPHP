@@ -191,10 +191,11 @@ class JasperPHP
 
         $output = array();
         $return_var = 0;
+
         if (function_exists('exec')) {
             exec($this->the_command, $output, $return_var);
         } else {
-            dd('Enable Exec');
+            throw new \Exception("Enable Exec", 1);
         }
         if ($return_var != 0)
             throw new \Exception("Your report has an error and couldn't be processed! Try to output the command using the function `output();` and run it manually in the console.", 1);
