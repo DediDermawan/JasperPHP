@@ -1,5 +1,7 @@
 # JasperReports for PHP
 
+[![Build Status](https://travis-ci.org/Zabanya/JasperPHP.svg?branch=master)](https://travis-ci.org/Zabanya/JasperPHP)
+
 Package to generate reports with [JasperReports 6](http://community.jaspersoft.com/project/jasperreports-library) library through [JasperStarter v3](http://jasperstarter.sourceforge.net/) command-line tool.
 
 ##Install
